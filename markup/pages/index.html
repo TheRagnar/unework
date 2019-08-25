@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head }}
+    </head>
+
+    <body class="body">
+        %=symbols=%
+
+        <div class="wrapper">
+            <div class="wrapper-column">
+                <div class="wrapper-column__wrapper">
+                    <div class="wrapper-column__earth">{{Icon iconName="earth"}}</div>
+                    <div class="nw-date"><span>04.09</span><span>09.11</span></div>
+                    <div class="wrapper-column__title">
+                        <div class="wrapper-column__text text-upper">
+                            ВЕСЬ МИР
+                        </div>
+                    </div>
+                    <div class="wrapper-column__footer"></div>
+                    <div class="wrapper-column__scroll"></div>
+                </div>
+            </div>
+            <div class="wrapper-content">
+                <div class="wrapper-section">
+                    <div class="wrapper-container wrapper-container--gray" data-text="ВЕСЬ МИР" data-dateTo="04.09" data-dateFrom="09.11" data-buttonText="Участвовать" data-buttonUrl="https://www.google.ru">
+                        1
+                    </div>
+
+                    <div class="wrapper-container" data-text="Москва" data-dateTo="04.09" data-dateFrom="09.11" data-buttonText="Участвовать" data-buttonUrl="https://www.google.ru">
+                        2
+                    </div>
+
+                    <div class="wrapper-container wrapper-container--gray" data-text="7 РЕГИОНОВ РОССИИ" data-dateTo="04.09" data-dateFrom="09.11" data-buttonText="Участвовать" data-buttonUrl="https://www.google.ru">
+                        3
+                    </div>
+
+                    <div class="wrapper-container" data-text="Партнеры" data-dateTo="04.09" data-dateFrom="09.11" data-buttonText="Участвовать" data-buttonUrl="https://www.google.ru">
+                        4
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        {{> assets/script }}
+        {{> assets/preloader }}
+    </body>
+
+</html>

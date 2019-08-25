@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+    {{> head/head }}
+</head>
+
+<body class="body">
+    %=symbols=%
+
+    <div class="exa">
+        <div class="example">
+            <div class="example__row">
+                <button class="btn">Кнопка</button>
+            </div>
+        </div>
+
+        <div class="example">
+            <div class="example__row"><button class="btn btn--primary">Кнопка</button></div>
+            <div class="example__row"><button class="btn btn--secondary">Кнопка</button></div>
+        </div>
+
+        <div class="example">
+            <div class="example__row"><button class="btn btn--primary btn--round">Кнопка</button></div>
+            <div class="example__row"><button class="btn btn--secondary btn--round">Кнопка</button></div>
+        </div>
+
+        <div class="example">
+            <div class="example__row"><a href="/" class="btn btn--primary btn--border">Кнопка</a></div>
+            <div class="example__row"><a href="/" class="btn btn--secondary btn--border">Кнопка</a></div>
+        </div>
+
+        <div class="example">
+            <div class="example__row"><a href="/" class="btn btn--primary btn--border">Кнопка</a></div>
+            <div class="example__row"><a href="/" class="btn btn--secondary btn--border">Кнопка</a></div>
+        </div>
+
+        <div class="example">
+            <div class="example__row"><a href="/" class="btn btn--gra btn--round">Кнопка</a></div>
+        </div>
+
+        <div class="example dark">
+            <div class="example__row"><a href="" class="btn btn--white">Кнопка</a></div>
+        </div>
+
+        <div class="example dark">
+            <div class="example__row"><a href="" class="btn btn--white btn--round btn--border">Кнопка</a></div>
+        </div>
+    </div>
+
+
+    <style>
+        .exa {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .example {
+            padding: 10px;
+            width: calc(100% / 4);
+        }
+
+        .example__row {
+            padding: 5px;
+        }
+
+        .dark {
+            background-color: #242b35;
+        }
+    </style>
+
+    {{> assets/script }}
+    {{> assets/preloader }}
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+// GUI stylies of the project
+
+
+.btn{
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background: none;
+    text-decoration: none;
+    padding: 0;
+    color: $palette-base;
+    font-size: 1rem;
+    min-width: 172px;
+    @include all-center;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 54px;
+    cursor: pointer;
+    width: 100%;
+    letter-spacing: 0.75px;
+    font-weight: 900;
+    transition: all ease-in-out .3s;
+    position: relative;
+    user-select: none;
+    &:active{
+        top: 1px;
+    }
+    &--round{
+        border-radius: 27px;
+    }
+    &--border{
+        border: 2px solid $palette-base;
+    }
+    &--primary{
+        color: #fff;
+        border: 2px solid $palette-primary;
+        background-color: $palette-primary;
+        &:hover{
+            color: $palette-primary;
+            background-color: transparent;
+        }
+    }
+    &--secondary{
+        color: #fff;
+        border: 2px solid $palette-secondary;
+        background-color: $palette-secondary;
+        &:hover{
+            color: $palette-secondary;
+            background-color: transparent;
+        }
+    }
+    &--white{
+        border: 2px solid #fff;
+        color: $palette-base;
+        background-color: #fff;
+    }
+    &--gra{
+        color: #fff;
+        background-color: $palette-primary;
+        background-image: linear-gradient(to right, $palette-secondary 0%, $palette-primary 100%);
+    }
+    &--border{
+        color: $palette-base;
+        background-color: transparent;
+        &.btn--secondary{
+            color: $palette-secondary;
+            &:hover{
+                background-color: $palette-secondary;
+                border-color: $palette-secondary;
+                color: #fff;
+            }
+        }
+        &.btn--primary{
+            color: $palette-primary;
+            &:hover{
+                background-color: $palette-primary;
+                border-color: $palette-primary;
+                color: #fff;
+            }
+        }
+        &.btn--white{
+            color: #fff;
+            &:hover{
+                background-color: $palette-primary;
+                border-color: $palette-primary;
+            }
+        }
+    }
+}
+

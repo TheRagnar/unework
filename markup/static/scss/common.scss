@@ -1,0 +1,92 @@
+// Common styles of the project
+
+/* document style */ 
+html,body,*:after,*:before,*{
+    font-family: 'IBM Plex Sans', sans-serif;
+    box-sizing: border-box;
+}
+html,body{
+    font-size: 15px;
+}
+
+.text-upper{
+    text-transform: uppercase;
+}
+.image-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.nw-date{
+    width: 235px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 2.8px;
+    color: $palette-primary;
+    font-size: rem(14);
+    font-weight: 700;
+    height: 10px;
+    &:after{
+        top: 50%;
+        left: 50%;
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 1px;
+        background-color: $palette-primary;
+        transform: translate(-50%,-50%);
+    }
+    span{
+
+    }
+}
+
+.wrapper{
+    &-container{
+        padding-top: 100px;
+        padding-bottom: 50px;
+        min-height: 100vh;
+        padding-left: 35%;
+        &--gray{
+            background-color: $palette-bg;
+        }
+    }
+    &-column{
+        position: fixed;
+        top: 0;
+        left: 42px;
+        height: 100vh;
+        background-color: #e1e4e7;
+        min-height: 300px;
+        padding-top: 75px;
+        width: 30%;
+        overflow: hidden;
+        &__earth{
+            position: absolute;
+            top: 135px;
+            right: 103px;
+        }
+        &__title{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) rotate(-90deg);
+            font-size: rem(60);
+            letter-spacing: 3px;
+            color: $palette-base;
+            font-weight: 900;
+            max-width: 350px;
+            text-align: center;
+            white-space: nowrap;
+        }
+    }
+}

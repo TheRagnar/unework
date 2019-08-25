@@ -1,0 +1,59 @@
+// Mixins.
+@mixin nl {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style: none;
+    list-style-position: outside;
+}
+
+@mixin cf {
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+    .lt-ie8 & {
+        zoom: 1;
+    }
+}
+
+@mixin blocks-justify {
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+@mixin absolut-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin all-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@function rem($size) {
+    @return ($size/15) + rem;
+}
+
+@mixin font-face($name, $file, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: "#{$name}";
+        src: url("#{$file}.eot");
+        src: url("#{$file}.eot?#iefix") format("embedded-opentype"),
+            url("#{$file}.woff") format("woff"),
+            url("#{$file}.ttf") format("truetype"),
+            url("#{$file}.svg?#webfont") format("svg");
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+// You can add your own mixins here:

@@ -1,0 +1,31 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head }}
+    </head>
+
+    <body class="body">
+        %=symbols=%
+
+        <div class="document">
+            <div class="document__content">
+                <!-- begin::header -->
+                {{> header/header }}
+                <!-- end::header -->
+            </div>
+            <div class="document__footer">
+                <!-- begin::footer -->
+                {{> footer/footer }}
+                <!-- end::footer -->
+            </div>
+        </div>
+        <!-- begin::modal -->
+        {{> modal/modal }}
+        <!-- end::modal -->
+
+        {{> assets/script }}
+        {{> assets/preloader }}
+    </body>
+
+</html>
