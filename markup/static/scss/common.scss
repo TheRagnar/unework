@@ -7,6 +7,7 @@ html,body,*:after,*:before,*{
 }
 html,body{
     font-size: 15px;
+    color: $palette-base;
 }
 
 .text-upper{
@@ -54,26 +55,63 @@ html,body{
     &-container{
         padding-top: 100px;
         padding-bottom: 50px;
-        min-height: 100vh;
         padding-left: 35%;
+        padding-right: 40px;
+        position: relative;
         &--gray{
             background-color: $palette-bg;
         }
+    }
+    &-content{
+        z-index: 1;
+        position: relative;
     }
     &-column{
         position: fixed;
         top: 0;
         left: 42px;
         height: 100vh;
-        background-color: #e1e4e7;
         min-height: 300px;
-        padding-top: 75px;
         width: 30%;
         overflow: hidden;
+        transition: all ease .6s;
+        padding-top: 84px;
+        z-index: 2;
+        &__wrapper{
+            position: absolute;
+            top: 84px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        &__scroll{
+            position: absolute;
+            left: 50px;
+            right: 50px;
+            bottom: 132px;
+            z-index: 2;
+            background-color: $palette-disabled;
+            height: 1px;
+        }
+        &__spinner{
+            height: 5px;
+            width: 0px;
+            border-radius: 3px;
+            background-color: $palette-primary;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
         &__earth{
             position: absolute;
             top: 135px;
-            right: 103px;
+            left: 0;
+        }
+        &__button{
+            width: 260px;
+            margin-left: auto;
+            margin-right: auto;
         }
         &__title{
             position: absolute;
@@ -84,9 +122,77 @@ html,body{
             letter-spacing: 3px;
             color: $palette-base;
             font-weight: 900;
-            max-width: 350px;
-            text-align: center;
-            white-space: nowrap;
+            min-width: 400px;
+            display: flex;
+            justify-content: center;
         }
+        &__footer{
+            position: absolute;
+            bottom: 191px;
+            left: 50px;
+            right: 50px;
+        }
+        .nw-date{
+            position: absolute;
+            top: 75px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &-link{
+        position: absolute;
+        right: 24px;
+        top: 90px;
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        background-color: $palette-primary;
+        text-decoration: none;
+        transition: background-color ease .6s;
+        color: $palette-base;
+        &:hover{
+            background-color: $palette-secondary;
+        }
+        &__text{
+            width: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: 700;
+            letter-spacing: 0.75px;
+            font-size: rem(15);
+        }
+        svg{
+            fill: $palette-base;
+        }
+    }
+}
+.container{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.title{
+    font-size: rem(30);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+    line-height: rem(21);
+    position: relative;
+    height: 21px;
+    &:after{
+        top: 71px;
+        background-color: $palette-primary;
+        width: 100px;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        content: '';
+    }
+    span{
+        color: $palette-primary;
     }
 }

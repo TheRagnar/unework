@@ -1,0 +1,89 @@
+.winner{
+    &__text{
+        font-weight: 700;
+        line-height: rem(24);
+        letter-spacing: 0.18px;
+        max-width: 770px;
+        font-size: rem(18);
+        p{
+            margin-bottom: 5px;
+        }
+    }
+    &__boxs{
+        display: flex;
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-top: 30px;
+    }
+    &__box{
+        width: calc(100% / 3 - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: #fff;
+        padding-left: 38px;
+        padding-right: 38px;
+        padding-top: 40px;
+        padding-bottom: 38px;
+    }
+    &__icon{
+        margin-bottom: 30px;
+    }
+    &__title{
+        text-transform: uppercase;
+        color: $palette-primary;
+        font-weight: 700;
+        font-size: rem(24);
+        margin-bottom: 25px;
+    }
+    &__txt{
+        font-size: rem(16);
+        line-height: rem(24);
+        p{
+            margin-bottom: 5px;
+        }
+        a{
+            color: $palette-primary;
+            border-bottom: 1px solid transparent;
+            text-decoration: none;
+            transition: all ease .6s;
+            &:hover{
+                color: $palette-secondary;
+                border-color: $palette-secondary;
+            }
+        }
+    }
+    &__footer{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__numbers{
+        display: flex;
+        justify-content: space-between;
+        width: 785px;
+    }
+    &__num{
+        height: 86px;
+        font-weight: 700;
+        font-size: rem(120);
+        line-height: 81px;
+        margin-bottom: 30px;
+    }
+    &__number{
+        text-align: center;
+    }
+    &__descript{
+        letter-spacing: 0.18px;
+        color: #8c939a;
+        font-weight: 700;
+        font-size: rem(18);
+    }
+    &__footer{
+        margin-top: 45px;
+    }
+    &__bold{
+        padding-top: 26px;
+        font-weight: 700;
+        font-size: rem(18);
+        line-height: rem(24);
+    }
+}

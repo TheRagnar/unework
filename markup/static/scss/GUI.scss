@@ -10,7 +10,7 @@
     padding: 0;
     color: $palette-base;
     font-size: 1rem;
-    min-width: 172px;
+    min-width: 174px;
     @include all-center;
     padding-left: 15px;
     padding-right: 15px;
@@ -22,6 +22,9 @@
     transition: all ease-in-out .3s;
     position: relative;
     user-select: none;
+    &:focus{
+        outline: none;
+    }
     &:active{
         top: 1px;
     }
@@ -36,8 +39,8 @@
         border: 2px solid $palette-primary;
         background-color: $palette-primary;
         &:hover{
-            color: $palette-primary;
-            background-color: transparent;
+            background-color: $palette-secondary;
+            border-color: $palette-secondary;
         }
     }
     &--secondary{
@@ -55,9 +58,29 @@
         background-color: #fff;
     }
     &--gra{
+        position: relative;
+        z-index: 1;
         color: #fff;
-        background-color: $palette-primary;
-        background-image: linear-gradient(to right, $palette-secondary 0%, $palette-primary 100%);
+        overflow: hidden;
+        background-color: $palette-secondary;
+        &:after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: $palette-secondary;
+            background-image: linear-gradient(to right, $palette-secondary 0%, $palette-primary 100%);
+            z-index: -2;
+            transition: all ease-in-out .3s;
+            content: '';
+        }
+        &:hover{
+            &:after{
+                opacity: 0;
+            }
+        }
     }
     &--border{
         color: $palette-base;
@@ -88,3 +111,68 @@
     }
 }
 
+.input{
+    position: relative;
+    label:not(.checkbox){
+        position: absolute;
+        color: #8c939a;
+        left: 0;
+        top: 16px;
+        font-size: rem(14);
+        user-select: none;
+        transition: all ease .6s;
+        pointer-events: none;
+    }
+    input{
+        border: none;
+        outline: none;
+        background: transparent;
+        width: 100%;
+        border-bottom: 1px solid #cdd2d7;
+        height: 48px;
+        font-weight: 700;
+        font-size: rem(16);
+        color: $palette-base;
+    }
+    &.focusIn{
+        label:not(.checkbox){
+            top: 0;
+            font-size: rem(12);
+        }
+    }
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    input{
+        display: none;
+    }
+    &__fake{
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        margin-right: 19px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url(../img/general/gal.png);
+        background-color: $palette-primary;
+        transition: all ease .6s;
+    }
+    &__text{
+        color: #8c939a;
+        font-size: rem(14);
+        a{
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all ease .6s;
+            color: $palette-primary;
+            &:hover{
+                border-color: $palette-secondary;
+                color: $palette-secondary;
+            }
+        }
+    }
+    input:checked+&__fake{
+        background-color: $palette-secondary;
+    }
+}

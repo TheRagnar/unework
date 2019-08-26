@@ -1,0 +1,88 @@
+.izh {
+    &__flex{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -6px;
+        margin-right: -6px;
+        margin-top: 40px;
+        margin-bottom: 70px;
+    }
+    &__box{
+        margin-left: 6px;
+        margin-right: 6px;
+        margin-bottom: 6px;
+        background-color: #fff;
+        width: calc(100% / 4 - 12px);
+        text-align: center;
+        padding-bottom: 28px;
+
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 25px;
+    }
+    &__icon{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__title{
+        font-size: rem(14);
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    &__ch{
+        display: flex;
+        align-items: center;
+    }
+    &__button{
+        justify-content: flex-end;
+        display: flex;
+        .btn{
+            width: 205px;
+        }
+    }
+}
+
+
+.form{
+    &-border{
+        padding: 2px;
+        background-image: linear-gradient(to right, $palette-secondary 0%, $palette-primary 100%);
+        &__wrapper{
+            background-color: $palette-bg;
+            position: relative;
+            padding-left: 53px;
+            padding-right: 53px;
+            padding-top: 42px;
+        }
+    }
+    &-double{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -35px;
+        margin-right: -35px;
+        margin-top: 20px;
+        .input{
+            width: calc(100% / 2 - 70px);
+            margin-left: 35px;
+            margin-right: 35px;
+            margin-bottom: 30px;
+        }
+    }
+    &__title{
+        position: absolute;
+        background-color: $palette-bg;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: rem(36);
+        font-weight: 700;
+        height: 36px;
+        line-height: rem(36);
+        top: -20px;
+        left: 25px;
+    }
+}

@@ -7,42 +7,61 @@
 
     <body class="body">
         %=symbols=%
-
+        {{> header/header}}
+        {{> first/first}}
         <div class="wrapper">
             <div class="wrapper-column">
                 <div class="wrapper-column__wrapper">
-                    <div class="wrapper-column__earth">{{Icon iconName="earth"}}</div>
+                    <div class="wrapper-column__earth"><img src="%=static=%img/general/1.png" alt=""></div>
                     <div class="nw-date"><span>04.09</span><span>09.11</span></div>
                     <div class="wrapper-column__title">
                         <div class="wrapper-column__text text-upper">
                             ВЕСЬ МИР
                         </div>
                     </div>
-                    <div class="wrapper-column__footer"></div>
-                    <div class="wrapper-column__scroll"></div>
+                    <div class="wrapper-column__footer">
+                        <a href="" class="wrapper-column__button btn btn--round btn--primary"></a>
+                    </div>
+                    <div class="wrapper-column__scroll">
+                        <div class="wrapper-column__spinner"></div>
+                    </div>
                 </div>
             </div>
             <div class="wrapper-content">
                 <div class="wrapper-section">
-                    <div class="wrapper-container wrapper-container--gray" data-text="ВЕСЬ МИР" data-dateTo="04.09" data-dateFrom="09.11" data-buttonText="Участвовать" data-buttonUrl="https://www.google.ru">
-                        1
+                    <div id="el1" class="wrapper-container wrapper-container--gray">
+                        <a href="/" class="wrapper-link">
+                            <div class="wrapper-link__text"><span>Подробнее</span> <img src="%=static=%img/general/arr.png" alt=""></div>
+                        </a>
+                        <div class="title">Конкурс <span>AIJ</span></div>
+                        {{> winner/winner }}
                     </div>
 
-                    <div class="wrapper-container" data-text="Москва" data-dateTo="04.09" data-dateFrom="09.11" data-buttonText="Участвовать" data-buttonUrl="https://www.google.ru">
-                        2
+                    <div id="el2" class="wrapper-container">
+                        <a href="/" class="wrapper-link">
+                            <div class="wrapper-link__text"><span>Подробнее</span> <img src="%=static=%img/general/arr.png" alt=""></div>
+                        </a>
+                        <div class="title">КОНФЕРЕНЦИЯ <span>AIJ МОСКВА</span></div>
+                        {{> front-map/front-map }}
                     </div>
 
-                    <div class="wrapper-container wrapper-container--gray" data-text="7 РЕГИОНОВ РОССИИ" data-dateTo="04.09" data-dateFrom="09.11" data-buttonText="Участвовать" data-buttonUrl="https://www.google.ru">
-                        3
+                    <div id="el3" class="wrapper-container wrapper-container--gray">
+                        <a href="/" class="wrapper-link">
+                            <div class="wrapper-link__text"><span>Подробнее</span> <img src="%=static=%img/general/arr.png" alt=""></div>
+                        </a>
+                        <div class="title">КОНФЕРЕНЦИи <span>В РЕГИОНАХ</span></div>
+                        {{> izh/izh}}
                     </div>
 
-                    <div class="wrapper-container" data-text="Партнеры" data-dateTo="04.09" data-dateFrom="09.11" data-buttonText="Участвовать" data-buttonUrl="https://www.google.ru">
-                        4
+                    <div id="el4" class="wrapper-container">
+                        <div class="title">Наши <span>Партнеры</span></div>
+                        {{> part/part }}
                     </div>
 
                 </div>
             </div>
         </div>
+        {{> footer/footer}}
 
         {{> assets/script }}
         {{> assets/preloader }}

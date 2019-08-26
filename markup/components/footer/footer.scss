@@ -1,0 +1,57 @@
+.footer{
+    padding-top: 48px;
+    background-color: $palette-base;
+    z-index: 10;
+    position: relative;
+    .container{        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logos{
+        display: flex;
+        align-items: center;
+    }
+    &__logo{
+        @include all-center;
+        &:not(:last-child){
+            margin-right: 80px;
+        }
+    }
+    &__menu{
+        display: flex;
+        flex-wrap: wrap;
+        width: 810px;
+        a{
+            width: calc(100% / 3);
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 0.8px;
+            font-size: rem(16);
+            transition: all ease .6s;
+            margin-bottom: 35px;
+            &:hover{
+                color: $palette-secondary;
+            }
+        }
+    }
+    .container:nth-child(2){
+        border-top: 1px solid #4d535b;
+        height: 75px;
+    }
+    &__copyr{
+        color: #d7d7d7;
+        opacity: 0.6;
+        font-size: rem(12);
+    }
+    &__polit{
+        font-size: rem(14);
+        color: #fff;
+        transition: all ease .6s;
+        text-decoration: none;
+        &:hover{
+            color: $palette-secondary;
+        }
+    }
+}
