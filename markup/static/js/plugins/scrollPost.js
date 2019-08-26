@@ -115,7 +115,6 @@ if (typeof Object.create !== 'function') {
                     // } else {
                         $(".wrapper-column__text").html(b).shuffleLetters({});
                         $(".wrapper-column__text").css("color", g);
-                        $(".wrapper-column__earth img").attr("src", h);
                         if(c){
                             $(".wrapper-column .nw-date").show();
                             $(".wrapper-column .nw-date span:first-child").html(c).shuffleLetters({});
@@ -130,6 +129,11 @@ if (typeof Object.create !== 'function') {
                         } else {
                             $(".wrapper-column__button").hide();
                         }
+                        $(".wrapper-column").addClass("scr");
+                        setTimeout(function(){
+                            $(".wrapper-column__earth img").attr("src", h);
+                            $(".wrapper-column").removeClass("scr");
+                        }, 700)
                     // }
                     $(".wrapper-column").css("background-color", a);
                 })

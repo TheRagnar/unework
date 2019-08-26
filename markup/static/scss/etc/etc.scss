@@ -1,11 +1,111 @@
+@media only screen and (max-height:800px){
+    .first__title{
+        margin-top: 45px;
+    }
+    .first__box:hover .first__title{
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+    .first__box:hover .first__text{
+        margin-top: 25px;
+    }
+    .first__box:hover .first__text{
+        margin-bottom: 30px;
+    }
+    .wrapper-column__scroll{
+        bottom: 7.2vh;
+    }
+    .wrapper-column__footer{
+        bottom: 12vh;
+    }
+}
+@media only screen and (max-width:1600px){
+    .first__title{
+        font-size: rem(36);
+        line-height: rem(40)
+    }
+    .winner__txt{
+        br{
+            display: none;
+        }
+    }
+    .winner__box{
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+@media only screen and (max-width:1400px){
+    .header__menu{
+        width: 660px;
+    }
+    .header__lang{
+        margin-left: 15px;
+        margin-right: 30px;
+    }
+    .header .logo{
+        width: 170px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .wrapper-column{
+        left: 15px;
+    }
+    .wrapper-link {
+        top: 34px;
+    }
+    .footer__menu{
+        width: 495px;
+    }
+    .footer__menu a{
+        margin-bottom: 18px;
+        width: 50%;
+    }
+    .wrapper-container{
+        padding-top: 60px;
+        padding-bottom: 40px;
+        padding-left: 28%;
+        padding-right: 15px;
+    }
+    .title{
+        margin-bottom: 66px;
+        &:after{
+            top: 60px;
+        }
+    }
+    .winner__text{
+        font-size: rem(16);
+        line-height: rem(24)
+    }
+    .front-map__content{
+        width: calc(100% / 2 - 10px)
+    }
+    .front-map__gra{
+        font-size: rem(14);
+    }
+    .winner__num{
+        font-size: rem(90);
+    }
+    .winner__boxs{
+        flex-wrap: wrap;
+    }
+    .winner__box{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
 @media only screen and (max-width:1200px){
-
-}
-@media only screen and (max-width:992px){
-
-}
-@media only screen and (max-width:768px){
-
+    .first__elem{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 @media only screen and (max-width:576px){
 
